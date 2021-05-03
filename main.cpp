@@ -18,7 +18,10 @@ int main(int argc, char *argv[]) {
 		}
 	}
 
-	auto time = std::chrono::duration_cast<std::chrono::duration<double, std::ratio<1>>>(std::chrono::high_resolution_clock::now() - start).count();
+	auto time = std::chrono::duration_cast
+	        <std::chrono::duration<double, std::ratio<1>>>
+	        (std::chrono::high_resolution_clock::now() - start)
+	        .count();
 
 	if (argc > 1 && argv[1] == std::string("print")) {
 		for (int i = 0; i < primes.size(); i++) {
