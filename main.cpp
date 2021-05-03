@@ -2,7 +2,6 @@
 #include <vector>
 #include <chrono>
 #include <string>
-#include <sstream>
 
 int main(int argc, char *argv[]) {
 	auto end = 10000;
@@ -27,9 +26,7 @@ int main(int argc, char *argv[]) {
 		}
 	}
 
-	std::ostringstream streamObj2;
-	streamObj2 << std::fixed<< time;
-	std::cout << "Time taken: " << streamObj2.str() << " seconds" << std::endl;
+	std::cout << "Time taken: " << time << " seconds" << std::endl;
 
 	return 0;
 }
